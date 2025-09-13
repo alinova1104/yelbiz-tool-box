@@ -118,6 +118,33 @@ export default {
             opacity: "1",
           },
         },
+        "gradient-x": {
+          "0%, 100%": {
+            backgroundPosition: "0% 50%",
+          },
+          "50%": {
+            backgroundPosition: "100% 50%",
+          },
+        },
+        "pulse-glow": {
+          "0%": {
+            boxShadow: "0 0 40px hsla(280, 100%, 70%, 0.3)",
+          },
+          "100%": {
+            boxShadow: "0 0 80px hsla(280, 100%, 70%, 0.6), 0 0 120px hsla(280, 100%, 70%, 0.3)",
+          },
+        },
+        "float-elegant": {
+          "0%, 100%": {
+            transform: "translateY(0px) rotate(0deg)",
+          },
+          "33%": {
+            transform: "translateY(-15px) rotate(1deg)",
+          },
+          "66%": {
+            transform: "translateY(-8px) rotate(-1deg)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -126,22 +153,26 @@ export default {
         "glow": "glow 2s ease-in-out infinite alternate",
         "slide-up": "slide-up 0.6s ease-out",
         "fade-in-up": "fade-in-up 0.8s ease-out",
+        "gradient-x": "gradient-x 3s ease infinite",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite alternate",
+        "float-elegant": "float-elegant 8s ease-in-out infinite",
       },
       backgroundImage: {
-        "gradient-primary": "var(--gradient-primary)",
-        "gradient-secondary": "var(--gradient-secondary)", 
         "gradient-hero": "var(--gradient-hero)",
+        "gradient-premium": "var(--gradient-premium)",
         "gradient-card": "var(--gradient-card)",
         "gradient-glass": "var(--gradient-glass)",
+        "gradient-border": "var(--gradient-border)",
       },
       boxShadow: {
+        "luxury": "var(--shadow-luxury)",
         "premium": "var(--shadow-premium)",
-        "card": "var(--shadow-card)",
         "glow": "var(--shadow-glow)",
-        "soft": "var(--shadow-soft)",
+        "hero": "var(--shadow-hero)",
       },
       backdropBlur: {
-        'glass': '20px',
+        'glass': 'var(--blur-glass)',
+        'hero': 'var(--blur-hero)',
       },
       transitionTimingFunction: {
         "smooth": "var(--transition-smooth)",

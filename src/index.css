@@ -8,53 +8,66 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 11 15% 3%;
+    --background: 8 8% 2%;
     --foreground: 0 0% 98%;
 
-    --card: 11 15% 3%;
+    --card: 8 8% 2%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 20 14.3% 4.1%;
+    --popover: 8 8% 3%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 263 70% 50.4%;
+    --primary: 280 100% 70%;
     --primary-foreground: 0 0% 98%;
-    --primary-glow: 263 70% 65%;
-    --primary-soft: 263 70% 50.4%;
+    --primary-glow: 290 100% 80%;
+    --primary-soft: 270 100% 65%;
 
-    --secondary: 20 14.3% 4.1%;
+    --secondary: 8 8% 8%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 12 6.5% 15.1%;
-    --muted-foreground: 24 5.4% 63.9%;
+    --muted: 8 8% 12%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 12 6.5% 15.1%;
+    --accent: 8 8% 15%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 12 6.5% 15.1%;
-    --input: 12 6.5% 15.1%;
-    --ring: 263 70% 50.4%;
+    --border: 0 0% 15%;
+    --input: 0 0% 12%;
+    --ring: 280 100% 70%;
 
-    /* Premium design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(263 70% 50.4%), hsl(280 60% 60%), hsl(320 50% 55%));
-    --gradient-secondary: linear-gradient(135deg, hsl(12 6.5% 15.1%), hsl(20 14.3% 8.1%));
-    --gradient-hero: linear-gradient(135deg, hsl(263 70% 50.4%), hsl(280 60% 60%), hsl(320 50% 55%));
-    --gradient-card: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
-    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    /* Ultra premium design tokens */
+    --gradient-hero: linear-gradient(135deg, 
+      hsl(280 100% 70%) 0%, 
+      hsl(320 100% 75%) 25%, 
+      hsl(260 100% 80%) 50%, 
+      hsl(300 100% 85%) 75%, 
+      hsl(280 100% 90%) 100%);
+    --gradient-premium: linear-gradient(135deg, 
+      rgba(255,255,255,0.1) 0%, 
+      rgba(255,255,255,0.05) 100%);
+    --gradient-card: linear-gradient(135deg, 
+      rgba(255,255,255,0.08) 0%, 
+      rgba(255,255,255,0.02) 100%);
+    --gradient-glass: linear-gradient(135deg, 
+      rgba(255,255,255,0.15) 0%, 
+      rgba(255,255,255,0.05) 100%);
+    --gradient-border: linear-gradient(135deg, 
+      rgba(255,255,255,0.2) 0%, 
+      rgba(255,255,255,0.05) 100%);
     
-    --shadow-premium: 0 25px 50px -12px hsl(263 70% 50.4% / 0.25);
-    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.12);
-    --shadow-glow: 0 0 60px hsl(263 70% 65% / 0.3);
-    --shadow-soft: 0 4px 16px hsl(0 0% 0% / 0.1);
+    --shadow-luxury: 0 32px 64px rgba(0, 0, 0, 0.4), 0 16px 32px rgba(0, 0, 0, 0.3);
+    --shadow-premium: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --shadow-glow: 0 0 80px hsla(280, 100%, 70%, 0.3);
+    --shadow-hero: 0 40px 100px rgba(0, 0, 0, 0.3);
 
-    --glass-border: 1px solid rgba(255, 255, 255, 0.1);
-    --glass-bg: rgba(255, 255, 255, 0.05);
+    --blur-glass: 24px;
+    --blur-hero: 120px;
     
-    --transition-premium: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-luxury: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-bounce: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;
 
