@@ -61,7 +61,7 @@ const Index = () => {
         { title: "Regex Builder", description: "Regular expression oluşturucu", icon: <Wrench className="h-5 w-5" />, href: "/text/regex-builder" },
         { title: "HTML Entities Encoder/Decoder", description: "HTML özel karakterleri kodlayın", icon: <Code className="h-5 w-5" />, href: "/text/html-entities" },
         { title: "Palindrome Checker", description: "Palindrom kontrolcüsü", icon: <Eye className="h-5 w-5" />, href: "/text/palindrome" },
-        { title: "Anagram Finder", description: "Anagram bulucu", icon: <Shuffle className="h-5 w-5" />, href: "/text/anagram" }
+        { title: "Anagram Finder", description: "Anagram bulucu", icon: <RefreshCw className="h-5 w-5" />, href: "/text/anagram" }
       ]
     },
     {
