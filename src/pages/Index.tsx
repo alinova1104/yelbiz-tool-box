@@ -3,7 +3,9 @@ import {
   Palette, Hash, Type, Scissors, Download, Upload, Copy, 
   RefreshCw, Shield, Network, Database, Smartphone, Cpu, 
   FileImage, FileVideo, Music, Gamepad2, QrCode, Clipboard,
-  Link, Timer, Eye, BarChart
+  Link, Timer, Eye, BarChart, Settings, Wrench, Compass,
+  DollarSign, Smile, Calendar, Clock, Key, CreditCard,
+  Megaphone, Target, CheckCircle, AlertCircle, Info, Shuffle
 } from "lucide-react";
 import { CategorySection } from "@/components/CategorySection";
 import { Button } from "@/components/ui/button";
@@ -15,245 +17,153 @@ const Index = () => {
 
   const categories = [
     {
-      title: "Text & Content Tools",
-      description: "Metin işleme, formatlama ve analiz araçları",
-      categoryKey: "text",
-      tools: [
-        {
-          title: "Word Counter",
-          description: "Kelime, karakter ve paragraf sayısını analiz eder. Okuma süresi hesaplar.",
-          icon: <Type className="h-5 w-5" />,
-          href: "/word-counter"
-        },
-        {
-          title: "Text Case Converter",
-          description: "Metni büyük harf, küçük harf, başlık formatı gibi farklı biçimlere çevirir.",
-          icon: <Type className="h-5 w-5" />,
-          href: "/text-case-converter"
-        },
-        {
-          title: "Lorem Ipsum Generator",
-          description: "Tasarım ve geliştirme için placeholder metin oluşturur.",
-          icon: <Type className="h-5 w-5" />,
-          href: "/lorem-ipsum"
-        },
-        {
-          title: "Text Difference Checker",
-          description: "İki metin arasındaki farkları karşılaştırır ve gösterir.",
-          icon: <Eye className="h-5 w-5" />,
-          href: "/text-diff"
-        }
-      ]
-    },
-    {
-      title: "Image & Media Tools", 
-      description: "Görsel ve medya dosyalarını işleme araçları",
-      categoryKey: "media",
-      tools: [
-        {
-          title: "Image Compressor",
-          description: "Görüntü kalitesini koruyarak dosya boyutunu küçültür.",
-          icon: <FileImage className="h-5 w-5" />,
-          href: "/image-compressor"
-        },
-        {
-          title: "Image Converter",
-          description: "JPG, PNG, WebP, SVG gibi formatlar arası dönüşüm yapar.",
-          icon: <RefreshCw className="h-5 w-5" />,
-          href: "/image-converter"
-        },
-        {
-          title: "QR Code Generator",
-          description: "URL, metin veya veri için özelleştirilebilir QR kodları oluşturur.",
-          icon: <QrCode className="h-5 w-5" />,
-          href: "/qr-generator"
-        },
-        {
-          title: "Color Palette Extractor",
-          description: "Görüntülerden baskın renkleri çıkarır ve palet oluşturur.",
-          icon: <Palette className="h-5 w-5" />,
-          href: "/color-extractor"
-        }
-      ]
-    },
-    {
-      title: "Code & Development",
-      description: "Geliştiriciler için kod araçları ve yardımcıları",
-      categoryKey: "code",
-      tools: [
-        {
-          title: "JSON Formatter & Validator",
-          description: "JSON verilerini düzenler, doğrular ve güzelleştirir.",
-          icon: <Code className="h-5 w-5" />,
-          href: "/json-formatter"
-        },
-        {
-          title: "Base64 Encoder/Decoder",
-          description: "Metinleri ve dosyaları Base64 formatına kodlar veya çözer.",
-          icon: <Lock className="h-5 w-5" />,
-          href: "/base64"
-        },
-        {
-          title: "URL Encoder/Decoder",
-          description: "URL'leri kodlar ve çözer. Özel karakterleri işler.",
-          icon: <Link className="h-5 w-5" />,
-          href: "/url-encoder"
-        },
-        {
-          title: "Hash Generator",
-          description: "MD5, SHA1, SHA256, SHA512 gibi hash değerleri oluşturur.",
-          icon: <Hash className="h-5 w-5" />,
-          href: "/hash-generator"
-        },
-        {
-          title: "CSS Minifier",
-          description: "CSS kodunu sıkıştırır ve optimize eder.",
-          icon: <Scissors className="h-5 w-5" />,
-          href: "/css-minifier"
-        },
-        {
-          title: "RegEx Tester",
-          description: "Düzenli ifadeleri test eder ve eşleşmeleri gösterir.",
-          icon: <Search className="h-5 w-5" />,
-          href: "/regex-tester"
-        }
-      ]
-    },
-    {
-      title: "Converter Tools",
-      description: "Formatlar arası dönüşüm ve çevirme araçları", 
-      categoryKey: "converter",
-      tools: [
-        {
-          title: "Unit Converter",
-          description: "Uzunluk, ağırlık, sıcaklık, alan gibi birimleri çevirir.",
-          icon: <RefreshCw className="h-5 w-5" />,
-          href: "/unit-converter"
-        },
-        {
-          title: "Currency Converter",
-          description: "Güncel kurlarla para birimlerini çevirir.",
-          icon: <Calculator className="h-5 w-5" />,
-          href: "/currency-converter"
-        },
-        {
-          title: "JSON to CSV",
-          description: "JSON verilerini CSV formatına dönüştürür.",
-          icon: <FileText className="h-5 w-5" />,
-          href: "/json-to-csv"
-        },
-        {
-          title: "Timestamp Converter",
-          description: "Unix timestamp ve tarih formatları arası dönüşüm.",
-          icon: <Timer className="h-5 w-5" />,
-          href: "/timestamp-converter"
-        }
-      ]
-    },
-    {
-      title: "Security & Privacy",
-      description: "Güvenlik ve gizlilik araçları",
-      categoryKey: "security", 
-      tools: [
-        {
-          title: "Password Generator",
-          description: "Güçlü ve güvenli şifreler oluşturur. Özelleştirilebilir kriterler.",
-          icon: <Shield className="h-5 w-5" />,
-          href: "/password-generator"
-        },
-        {
-          title: "UUID Generator",
-          description: "Benzersiz tanımlayıcılar (UUID) oluşturur.",
-          icon: <Zap className="h-5 w-5" />,
-          href: "/uuid-generator"
-        },
-        {
-          title: "SSL Certificate Checker",
-          description: "SSL sertifikalarını kontrol eder ve detaylarını gösterir.",
-          icon: <Shield className="h-5 w-5" />,
-          href: "/ssl-checker"
-        }
-      ]
-    },
-    {
-      title: "SEO & Marketing",
-      description: "Arama motoru optimizasyonu ve pazarlama araçları",
+      title: "SEO Tools",
+      description: "Arama motoru optimizasyonu ve web analiz araçları",
       categoryKey: "seo",
       tools: [
-        {
-          title: "Meta Tag Analyzer",
-          description: "Web sitesi meta etiketlerini analiz eder ve öneriler sunar.",
-          icon: <Globe className="h-5 w-5" />,
-          href: "/meta-analyzer"
-        },
-        {
-          title: "Keyword Density Checker", 
-          description: "İçerikteki anahtar kelime yoğunluğunu analiz eder.",
-          icon: <BarChart className="h-5 w-5" />,
-          href: "/keyword-density"
-        },
-        {
-          title: "Backlink Checker",
-          description: "Web sitesinin geri bağlantılarını analiz eder.",
-          icon: <Link className="h-5 w-5" />,
-          href: "/backlink-checker"
-        },
-        {
-          title: "Social Media Preview",
-          description: "Sosyal medyada nasıl görüneceğini önizler.",
-          icon: <Eye className="h-5 w-5" />,
-          href: "/social-preview"
-        }
+        { title: "Meta Tag Generator", description: "Web siteniz için SEO uyumlu meta etiketleri oluşturun", icon: <Globe className="h-5 w-5" />, href: "/seo/meta-tag-generator" },
+        { title: "Robots.txt Generator", description: "Arama motoru botları için robots.txt dosyası oluşturun", icon: <Settings className="h-5 w-5" />, href: "/seo/robots-generator" },
+        { title: "Sitemap XML Generator", description: "Siteniz için XML sitemap oluşturun", icon: <Network className="h-5 w-5" />, href: "/seo/sitemap-generator" },
+        { title: "URL Encoder/Decoder", description: "URL'leri kodlayın ve çözümleyin", icon: <Link className="h-5 w-5" />, href: "/seo/url-encoder" },
+        { title: "SEO Friendly URL Checker", description: "URL'lerinizin SEO uyumluluğunu kontrol edin", icon: <CheckCircle className="h-5 w-5" />, href: "/seo/url-checker" },
+        { title: "Backlink Checker", description: "Web sitenizin geri bağlantılarını analiz edin", icon: <Link className="h-5 w-5" />, href: "/seo/backlink-checker" },
+        { title: "Keyword Density Analyzer", description: "İçerikteki anahtar kelime yoğunluğunu analiz edin", icon: <BarChart className="h-5 w-5" />, href: "/seo/keyword-density" },
+        { title: "Page Speed Insights", description: "Web sayfanızın hızını analiz edin", icon: <Zap className="h-5 w-5" />, href: "/seo/page-speed" },
+        { title: "Canonical URL Generator", description: "Canonical URL etiketleri oluşturun", icon: <Settings className="h-5 w-5" />, href: "/seo/canonical-generator" },
+        { title: "Broken Link Checker", description: "Kırık bağlantıları tespit edin", icon: <AlertCircle className="h-5 w-5" />, href: "/seo/broken-link-checker" }
       ]
     },
     {
-      title: "File & Document Tools",
-      description: "Dosya işleme ve belge yönetim araçları",
-      categoryKey: "file",
+      title: "JSON & Data Tools",
+      description: "JSON ve veri formatlama araçları",
+      categoryKey: "json",
       tools: [
-        {
-          title: "PDF Merger",
-          description: "Birden fazla PDF dosyasını tek dosyada birleştirir.",
-          icon: <FileText className="h-5 w-5" />,
-          href: "/pdf-merger"
-        },
-        {
-          title: "PDF Compressor", 
-          description: "PDF dosya boyutunu küçültür ve optimize eder.",
-          icon: <Scissors className="h-5 w-5" />,
-          href: "/pdf-compressor"
-        },
-        {
-          title: "File Hash Checker",
-          description: "Dosyaların bütünlüğünü kontrol için hash değeri hesaplar.",
-          icon: <Shield className="h-5 w-5" />,
-          href: "/file-hash"
-        }
+        { title: "JSON Formatter / Validator", description: "JSON verilerinizi düzenleyin ve doğrulayın", icon: <Code className="h-5 w-5" />, href: "/json/formatter" },
+        { title: "JSON to CSV Converter", description: "JSON verilerini CSV formatına dönüştürün", icon: <FileText className="h-5 w-5" />, href: "/json/to-csv" },
+        { title: "CSV to JSON Converter", description: "CSV verilerini JSON formatına dönüştürün", icon: <Database className="h-5 w-5" />, href: "/json/from-csv" },
+        { title: "XML to JSON Converter", description: "XML verilerini JSON formatına dönüştürün", icon: <RefreshCw className="h-5 w-5" />, href: "/json/from-xml" },
+        { title: "YAML to JSON Converter", description: "YAML verilerini JSON formatına dönüştürün", icon: <RefreshCw className="h-5 w-5" />, href: "/json/from-yaml" },
+        { title: "JSON Minifier", description: "JSON verilerinizi sıkıştırın", icon: <Scissors className="h-5 w-5" />, href: "/json/minifier" },
+        { title: "JSON Schema Validator", description: "JSON Schema ile verilerinizi doğrulayın", icon: <CheckCircle className="h-5 w-5" />, href: "/json/schema-validator" }
       ]
     },
     {
-      title: "Network & System",
-      description: "Ağ ve sistem analiz araçları",
-      categoryKey: "network",
+      title: "Text & String Tools",
+      description: "Metin işleme ve string manipülasyon araçları",
+      categoryKey: "text",
       tools: [
-        {
-          title: "IP Address Lookup",
-          description: "IP adresinin konumunu ve detaylarını gösterir.",
-          icon: <Network className="h-5 w-5" />,
-          href: "/ip-lookup"
-        },
-        {
-          title: "Domain Whois",
-          description: "Domain adı bilgilerini ve kayıt detaylarını sorgular.",
-          icon: <Globe className="h-5 w-5" />,
-          href: "/whois"
-        },
-        {
-          title: "Website Speed Test",
-          description: "Web sitesi hızını test eder ve performans önerileri sunar.",
-          icon: <Zap className="h-5 w-5" />,
-          href: "/speed-test"
-        }
+        { title: "Base64 Encode/Decode", description: "Metinleri Base64 formatına kodlayın/çözün", icon: <Lock className="h-5 w-5" />, href: "/text/base64" },
+        { title: "URL Encode/Decode", description: "URL'leri kodlayın ve çözün", icon: <Link className="h-5 w-5" />, href: "/text/url-encoder" },
+        { title: "Lorem Ipsum Generator", description: "Tasarım için örnek metin oluşturun", icon: <Type className="h-5 w-5" />, href: "/text/lorem-ipsum" },
+        { title: "Word & Character Counter", description: "Kelime ve karakter sayısını hesaplayın", icon: <Hash className="h-5 w-5" />, href: "/text/word-counter" },
+        { title: "Text Case Converter", description: "Metin büyük/küçük harf dönüştürücü", icon: <Type className="h-5 w-5" />, href: "/text/case-converter" },
+        { title: "Regex Tester", description: "Regular expression'ları test edin", icon: <Search className="h-5 w-5" />, href: "/text/regex-tester" },
+        { title: "Regex Builder", description: "Regular expression oluşturucu", icon: <Wrench className="h-5 w-5" />, href: "/text/regex-builder" },
+        { title: "HTML Entities Encoder/Decoder", description: "HTML özel karakterleri kodlayın", icon: <Code className="h-5 w-5" />, href: "/text/html-entities" },
+        { title: "Palindrome Checker", description: "Palindrom kontrolcüsü", icon: <Eye className="h-5 w-5" />, href: "/text/palindrome" },
+        { title: "Anagram Finder", description: "Anagram bulucu", icon: <Shuffle className="h-5 w-5" />, href: "/text/anagram" }
+      ]
+    },
+    {
+      title: "PDF & File Tools", 
+      description: "PDF ve dosya işleme araçları",
+      categoryKey: "pdf",
+      tools: [
+        { title: "PDF to JPG/PNG Converter", description: "PDF'leri görsel formatına dönüştürün", icon: <FileImage className="h-5 w-5" />, href: "/pdf/to-image" },
+        { title: "PDF Merger", description: "Birden fazla PDF'yi birleştirin", icon: <Copy className="h-5 w-5" />, href: "/pdf/merger" },
+        { title: "PDF Splitter", description: "PDF'leri sayfalara ayırın", icon: <Scissors className="h-5 w-5" />, href: "/pdf/splitter" },
+        { title: "PDF Metadata Viewer", description: "PDF meta verilerini görüntüleyin", icon: <Info className="h-5 w-5" />, href: "/pdf/metadata-viewer" },
+        { title: "PDF Metadata Editor", description: "PDF meta verilerini düzenleyin", icon: <Settings className="h-5 w-5" />, href: "/pdf/metadata-editor" },
+        { title: "PDF Text Extractor", description: "PDF'den metin çıkarın", icon: <Type className="h-5 w-5" />, href: "/pdf/text-extractor" },
+        { title: "PDF Compressor", description: "PDF dosya boyutunu küçültün", icon: <Download className="h-5 w-5" />, href: "/pdf/compressor" },
+        { title: "PDF Form Filler", description: "PDF formlarını doldurun", icon: <FileText className="h-5 w-5" />, href: "/pdf/form-filler" },
+        { title: "File Format Converter", description: "Dosya formatları arası dönüştürme", icon: <RefreshCw className="h-5 w-5" />, href: "/pdf/format-converter" },
+        { title: "Barcode / QR Code Generator", description: "Barkod ve QR kod oluşturucu", icon: <QrCode className="h-5 w-5" />, href: "/pdf/qr-generator" }
+      ]
+    },
+    {
+      title: "Image & Graphics Tools",
+      description: "Görsel düzenleme ve grafik araçları", 
+      categoryKey: "image",
+      tools: [
+        { title: "Favicon Generator", description: "Web siteniz için favicon oluşturun", icon: <Image className="h-5 w-5" />, href: "/image/favicon-generator" },
+        { title: "Image Compressor", description: "Görselleri sıkıştırın", icon: <Download className="h-5 w-5" />, href: "/image/compressor" },
+        { title: "Image Resizer", description: "Görsel boyutlandırma", icon: <Settings className="h-5 w-5" />, href: "/image/resizer" },
+        { title: "Base64 Image Encoder/Decoder", description: "Görselleri Base64'e dönüştürün", icon: <Lock className="h-5 w-5" />, href: "/image/base64" },
+        { title: "Color Picker", description: "Renk seçici ve paleti", icon: <Palette className="h-5 w-5" />, href: "/image/color-picker" },
+        { title: "Palette Generator", description: "Renk paleti oluşturucu", icon: <Palette className="h-5 w-5" />, href: "/image/palette-generator" },
+        { title: "Image to ASCII Art Converter", description: "Görseli ASCII sanatına dönüştürün", icon: <Type className="h-5 w-5" />, href: "/image/ascii-converter" },
+        { title: "QR Code Generator", description: "QR kod oluşturucu", icon: <QrCode className="h-5 w-5" />, href: "/image/qr-generator" },
+        { title: "Screenshot Tool", description: "Ekran görüntüsü aracı", icon: <Image className="h-5 w-5" />, href: "/image/screenshot" },
+        { title: "EXIF Data Viewer", description: "Görsel EXIF verilerini görüntüleyin", icon: <Info className="h-5 w-5" />, href: "/image/exif-viewer" }
+      ]
+    },
+    {
+      title: "Developer & Network Tools",
+      description: "Geliştirici ve ağ analiz araçları",
+      categoryKey: "developer", 
+      tools: [
+        { title: "HTTP Header Viewer", description: "HTTP başlıklarını görüntüleyin", icon: <Network className="h-5 w-5" />, href: "/dev/http-headers" },
+        { title: "IP Geolocation Tool", description: "IP konum tespit aracı", icon: <Compass className="h-5 w-5" />, href: "/dev/ip-geolocation" },
+        { title: "Whois Lookup", description: "Domain whois sorgulama", icon: <Search className="h-5 w-5" />, href: "/dev/whois" },
+        { title: "DNS Lookup", description: "DNS kayıtlarını sorgulayın", icon: <Network className="h-5 w-5" />, href: "/dev/dns-lookup" },
+        { title: "Propagation Checker", description: "DNS yayılım kontrolü", icon: <Globe className="h-5 w-5" />, href: "/dev/dns-propagation" },
+        { title: "Port Scanner", description: "Port tarama aracı", icon: <Shield className="h-5 w-5" />, href: "/dev/port-scanner" },
+        { title: "SSL Checker", description: "SSL sertifika kontrolü", icon: <Lock className="h-5 w-5" />, href: "/dev/ssl-checker" },
+        { title: "CURL Tester", description: "CURL komutlarını test edin", icon: <Code className="h-5 w-5" />, href: "/dev/curl-tester" },
+        { title: "API Response Tester", description: "API yanıtlarını test edin", icon: <Database className="h-5 w-5" />, href: "/dev/api-tester" }
+      ]
+    },
+    {
+      title: "Time & Date Tools",
+      description: "Zaman ve tarih araçları",
+      categoryKey: "time",
+      tools: [
+        { title: "Unix Timestamp Converter", description: "Unix zaman damgası dönüştürücü", icon: <Clock className="h-5 w-5" />, href: "/time/unix-converter" },
+        { title: "World Clock", description: "Dünya saati", icon: <Globe className="h-5 w-5" />, href: "/time/world-clock" },
+        { title: "Timezone Converter", description: "Saat dilimi dönüştürücü", icon: <Clock className="h-5 w-5" />, href: "/time/timezone-converter" },
+        { title: "Countdown Timer", description: "Geri sayım sayacı", icon: <Timer className="h-5 w-5" />, href: "/time/countdown" },
+        { title: "Stopwatch", description: "Kronometre", icon: <Timer className="h-5 w-5" />, href: "/time/stopwatch" },
+        { title: "Date Calculator", description: "Tarih hesaplayıcı", icon: <Calculator className="h-5 w-5" />, href: "/time/date-calculator" },
+        { title: "Holiday API Integration", description: "Tatil günleri API entegrasyonu", icon: <Calendar className="h-5 w-5" />, href: "/time/holidays" }
+      ]
+    },
+    {
+      title: "Security & Encryption Tools",
+      description: "Güvenlik ve şifreleme araçları",
+      categoryKey: "security",
+      tools: [
+        { title: "MD5 Hash Generator", description: "MD5 hash oluşturucu", icon: <Hash className="h-5 w-5" />, href: "/security/md5" },
+        { title: "SHA Hash Generator", description: "SHA hash oluşturucu", icon: <Hash className="h-5 w-5" />, href: "/security/sha" },
+        { title: "Password Strength Checker", description: "Şifre güçlülük kontrolcüsü", icon: <Shield className="h-5 w-5" />, href: "/security/password-checker" },
+        { title: "Random Password Generator", description: "Rastgele şifre oluşturucu", icon: <Key className="h-5 w-5" />, href: "/security/password-generator" },
+        { title: "JWT Decoder", description: "JWT token çözücü", icon: <Lock className="h-5 w-5" />, href: "/security/jwt-decoder" },
+        { title: "HMAC Generator", description: "HMAC oluşturucu", icon: <Hash className="h-5 w-5" />, href: "/security/hmac" },
+        { title: "Two-Factor Authentication QR Code Generator", description: "2FA QR kodu oluşturucu", icon: <QrCode className="h-5 w-5" />, href: "/security/2fa-qr" }
+      ]
+    },
+    {
+      title: "Finance & Calculators",
+      description: "Finansal araçlar ve hesaplayıcılar", 
+      categoryKey: "finance",
+      tools: [
+        { title: "Currency Exchange Rates", description: "Döviz kurları", icon: <DollarSign className="h-5 w-5" />, href: "/finance/currency" },
+        { title: "Loan Calculator", description: "Kredi hesaplayıcı", icon: <Calculator className="h-5 w-5" />, href: "/finance/loan-calculator" },
+        { title: "Basic Accounting / Invoice Demo", description: "Temel muhasebe / fatura demo", icon: <CreditCard className="h-5 w-5" />, href: "/finance/invoice" },
+        { title: "Interest Calculator", description: "Faiz hesaplayıcı", icon: <Calculator className="h-5 w-5" />, href: "/finance/interest" },
+        { title: "Budget Planner", description: "Bütçe planlayıcı", icon: <BarChart className="h-5 w-5" />, href: "/finance/budget" }
+      ]
+    },
+    {
+      title: "Fun & General Tools",
+      description: "Eğlenceli ve genel araçlar",
+      categoryKey: "fun", 
+      tools: [
+        { title: "Emoji Picker", description: "Emoji seçici", icon: <Smile className="h-5 w-5" />, href: "/fun/emoji-picker" },
+        { title: "Random Joke Generator", description: "Rastgele şaka oluşturucu", icon: <Smile className="h-5 w-5" />, href: "/fun/joke-generator" },
+        { title: "Colored Text Generator", description: "Renkli metin oluşturucu", icon: <Palette className="h-5 w-5" />, href: "/fun/colored-text" },
+        { title: "ASCII Art Generator", description: "ASCII sanat oluşturucu", icon: <Type className="h-5 w-5" />, href: "/fun/ascii-art" },
+        { title: "Name Meaning / Numerology", description: "İsim anlamı / numeroloji", icon: <Eye className="h-5 w-5" />, href: "/fun/name-meaning" }
       ]
     }
   ];
