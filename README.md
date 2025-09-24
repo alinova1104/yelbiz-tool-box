@@ -1,73 +1,236 @@
-# Welcome to your Lovable project
+# 🛠️ DevTools Hub
 
-## Project info
+**Modern ve Şık Developer Araçları Platformu**
 
-**URL**: https://lovable.dev/projects/4165a514-5e8b-48e8-88be-e51633b54343
+DevTools Hub, geliştiriciler ve dijital profesyoneller için tasarlanmış kapsamlı bir web tabanlı araç koleksiyonudur. 70+ farklı araçla günlük iş akışınızı hızlandırın ve üretkenliğinizi artırın.
 
-## How can I edit this code?
+## ✨ Özellikler
 
-There are several ways of editing your application.
+### 🎯 SEO Araçları
+- Meta Tag Generator
+- Robots.txt Generator
+- Sitemap XML Generator
+- URL Encoder/Decoder
+- SEO Friendly URL Checker
+- Backlink Checker
+- Keyword Density Analyzer
+- Page Speed Insights
+- Canonical URL Generator
+- Broken Link Checker
 
-**Use Lovable**
+### 📊 JSON ve Veri İşleme
+- JSON Formatter / Validator ✅
+- JSON to CSV Converter
+- CSV to JSON Converter
+- XML to JSON Converter
+- YAML to JSON Converter
+- JSON Minifier
+- JSON Schema Validator
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/4165a514-5e8b-48e8-88be-e51633b54343) and start prompting.
+### 📝 Metin ve String İşleme
+- Base64 Encode/Decode ✅
+- URL Encode/Decode
+- Lorem Ipsum Generator ✅
+- Word & Character Counter ✅
+- Text Case Converter ✅
+- Regex Tester
+- Regex Builder
+- HTML Entities Encoder/Decoder
+- Palindrome Checker
+- Anagram Finder
 
-Changes made via Lovable will be committed automatically to this repo.
+### 📄 PDF ve Dosya İşleme
+- PDF to JPG/PNG Converter
+- PDF Merger
+- PDF Splitter
+- PDF Metadata Viewer
+- PDF Metadata Editor
+- PDF Text Extractor
+- PDF Compressor
+- PDF Form Filler
+- File Format Converter
+- Barcode / QR Code Generator ✅
 
-**Use your preferred IDE**
+### 🎨 Görsel ve Grafik Araçları
+- Favicon Generator
+- Image Compressor
+- Image Resizer
+- Base64 Image Encoder/Decoder
+- Color Picker
+- Palette Generator
+- Image to ASCII Art Converter
+- QR Code Generator ✅
+- Screenshot Tool
+- EXIF Data Viewer
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 🌐 Geliştirici ve Network Araçları
+- HTTP Header Viewer
+- IP Geolocation Tool
+- Whois Lookup
+- DNS Lookup
+- Propagation Checker
+- Port Scanner
+- SSL Checker
+- CURL Tester
+- API Response Tester
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### ⏰ Tarih ve Zaman Araçları
+- Unix Timestamp Converter
+- World Clock
+- Timezone Converter
+- Countdown Timer
+- Stopwatch
+- Date Calculator
+- Holiday API Integration
 
-Follow these steps:
+### 🔐 Şifreleme ve Güvenlik Araçları
+- MD5 Hash Generator
+- SHA Hash Generator
+- Password Strength Checker
+- Random Password Generator ✅
+- JWT Decoder
+- HMAC Generator
+- Two-Factor Authentication QR Code Generator
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+### 💰 Finans ve Hesaplayıcılar
+- Currency Exchange Rates
+- Loan Calculator
+- Basic Accounting / Invoice Demo
+- Interest Calculator
+- Budget Planner
+
+### 🎮 Eğlence ve Genel Araçlar
+- Emoji Picker
+- Random Joke Generator
+- Colored Text Generator
+- ASCII Art Generator
+- Name Meaning / Numerology
+
+## 🚀 Canlı Demo
+
+**URL**: [https://lovable.dev/projects/4165a514-5e8b-48e8-88be-e51633b54343](https://lovable.dev/projects/4165a514-5e8b-48e8-88be-e51633b54343)
+
+## 🛠️ Teknolojiler
+
+Bu proje aşağıdaki modern teknolojilerle geliştirilmiştir:
+
+- **⚡ Vite** - Hızlı build tool
+- **⚛️ React 18** - Modern UI kütüphanesi
+- **🔷 TypeScript** - Type-safe geliştirme
+- **🎨 Tailwind CSS** - Utility-first CSS framework
+- **🧩 shadcn/ui** - Modern React bileşenleri
+- **🎯 Lucide React** - Beautiful icons
+- **📱 Responsive Design** - Her cihazda mükemmel görünüm
+
+## 📦 Kurulum
+
+### Ön Gereksinimler
+- Node.js (v16 veya üzeri)
+- npm veya yarn
+
+### Adımlar
+
+1. **Projeyi klonlayın**
+```bash
 git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
 cd <YOUR_PROJECT_NAME>
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+2. **Bağımlılıkları yükleyin**
+```bash
+npm install
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. **Geliştirme sunucusunu başlatın**
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. **Tarayıcınızda açın**
+```
+http://localhost:8080
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🎯 Kullanım
 
-**Use GitHub Codespaces**
+1. Ana sayfadan istediğiniz araç kategorisini seçin
+2. Kullanmak istediğiniz aracı tıklayın
+3. Gerekli bilgileri girin ve "İşle" butonuna tıklayın
+4. Sonuçları kopyalayın veya indirin
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Örnek Kullanım
 
-## What technologies are used for this project?
+**JSON Formatter:**
+```json
+{"name":"John","age":30}
+```
+⬇️
+```json
+{
+  "name": "John",
+  "age": 30
+}
+```
 
-This project is built with:
+**Password Generator:**
+- Uzunluk seçin (8-50 karakter)
+- Karakter türlerini belirleyin
+- Güvenli şifre oluşturun
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🚀 Deployment
 
-## How can I deploy this project?
+### Lovable ile Deploy
+1. [Lovable editörde](https://lovable.dev/projects/4165a514-5e8b-48e8-88be-e51633b54343) "Publish" butonuna tıklayın
+2. Özel domain bağlamak için Project > Settings > Domains
 
-Simply open [Lovable](https://lovable.dev/projects/4165a514-5e8b-48e8-88be-e51633b54343) and click on Share -> Publish.
+### Manuel Deploy
+```bash
+npm run build
+```
+`dist` klasörünü istediğiniz hosting servisine yükleyin.
 
-## Can I connect a custom domain to my Lovable project?
+## 🎨 Tasarım Sistemi
 
-Yes, you can!
+Proje modern ve lüks bir tasarım sistemine sahiptir:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- **🌙 Dark/Light Mode** - Otomatik tema değişimi
+- **🎨 Gradient Backgrounds** - Premium görünüm
+- **✨ Smooth Animations** - Akıcı geçişler
+- **📱 Responsive Design** - Mobile-first yaklaşım
+- **🔥 Glassmorphism Effects** - Modern cam efektleri
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 🤝 Katkıda Bulunma
+
+1. Bu repository'yi fork edin
+2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
+3. Değişikliklerinizi commit edin (`git commit -m 'Add amazing feature'`)
+4. Branch'inizi push edin (`git push origin feature/amazing-feature`)
+5. Pull Request oluşturun
+
+## 📄 Lisans
+
+Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosyasına bakın.
+
+## 🔮 Gelecek Özellikler
+
+- [ ] API entegrasyonları
+- [ ] Kullanıcı hesapları
+- [ ] Araç geçmişi
+- [ ] Özel tema seçenekleri
+- [ ] Toplu işlem desteği
+- [ ] Export/Import funktionları
+
+## 📧 İletişim
+
+Sorularınız ve önerileriniz için:
+- 🐛 Bug reports: GitHub Issues
+- 💡 Feature requests: GitHub Discussions
+- 📧 Email: [email protected]
+
+## ⭐ Destek
+
+Bu projeyi beğendiyseniz lütfen ⭐ verin ve paylaşın!
+
+---
+
+**Made with ❤️ and ☕ by Developer Community**
